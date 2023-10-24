@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import Brands from "./Brands";
 import Footer from "../Footer/Footer";
 import Sponsor from "./Sponsor";
+import Trending from "./Trending";
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
                 }
                 </div>
             </div>
+            <Trending></Trending>
             <Sponsor></Sponsor>
             <Footer></Footer>
         </div>

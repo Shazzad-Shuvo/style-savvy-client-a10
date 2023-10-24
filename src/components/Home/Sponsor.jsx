@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const Sponsor = () => {
     return (
         <div className="mt-20">
-            <h2 className="text-4xl font-semibold text-center mb-10">Sponsors On Board</h2>
+            <h2 className="text-4xl font-bold text-center mb-10">Sponsors On Board</h2>
             <Marquee gradient={true} gradientWidth={300} autoFill={true} >
                 <img className="w-40 mx-10" src={'https://i.ibb.co/QXbZsGM/Gucci.jpg'} alt="" />
                 <img className="w-40 mx-10" src={'https://i.ibb.co/nbw6qYN/nike-logo-49343.png'} alt="" />
