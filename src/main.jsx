@@ -8,6 +8,7 @@ import {
 import Root from './components/Root/Root';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
+import AddProduct from './components/AddProduct/AddProduct';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch('http://localhost:5000/brands')
       },
+      {
+        path: '/addProduct',
+        element: <AddProduct></AddProduct>,
+      }
     ]
   },
 ]);
