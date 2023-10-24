@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Banner from "./Banner";
 import Brands from "./Brands";
+import Footer from "../Footer/Footer";
+import Sponsor from "./Sponsor";
 
 const Home = () => {
 
@@ -20,6 +22,8 @@ const Home = () => {
                 }
                 </div>
             </div>
+            <Sponsor></Sponsor>
+            <Footer></Footer>
         </div>
     );
 };
