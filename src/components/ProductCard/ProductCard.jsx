@@ -17,7 +17,10 @@ const ProductCard = ({ product }) => {
                     <Link to={`/details/${_id}`}>
                         <button className="btn btn-primary">Details</button>
                     </Link>
-                    <button className="btn btn-primary">Update</button>
+                    <Link to={`/updateProduct/${_id}`}>
+                        <button className="btn btn-primary">Update</button>
+                    </Link>
+
                 </div>
             </div>
         </div>

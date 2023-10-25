@@ -48,7 +48,7 @@ const ProductCart = () => {
         <div>
             <Navbar></Navbar>
             <div className="mt-20">
-                <h2>Products in Cart: {cartProducts.length}</h2>
+                <h2 className="text-5xl font-bold text-center mb-10">MyCart</h2>
                 <div className=" max-w-4xl mx-auto overflow-x-auto">
                     <table className="table">
                         {/* head */}
