@@ -50,7 +50,6 @@ const AddProduct = () => {
             <div className="bg-[#F4F3F0] p-24">
                 <h2 className="text-4xl font-extrabold">Add Product</h2>
                 <form onSubmit={handleAddProduct}>
-
                     {/* product name & brand name */}
                     <div className="md:flex mb-6 gap-4">
                         <div className="form-control md:w-1/2">
