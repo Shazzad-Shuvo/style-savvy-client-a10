@@ -9,6 +9,7 @@ import Root from './components/Root/Root';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import AddProduct from './components/AddProduct/AddProduct';
+import BrandProducts from './components/BrandProducts/BrandProducts';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,12 @@ const router = createBrowserRouter([
       {
         path: '/addProduct',
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: '/brandProducts/:name',
+        element: <BrandProducts></BrandProducts>,
+        loader: () => fetch('http://localhost:5000/products')
+
       }
     ]
   },
