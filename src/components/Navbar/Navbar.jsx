@@ -1,13 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                console.log('logged out successfully');
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    };
 
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink>Register</NavLink></li>
+        <li><NavLink to='/register'>Register</NavLink></li>
         <li><NavLink to='/addProduct'>Add Product</NavLink></li>
         <li><NavLink to='/cart'>My Cart</NavLink></li>
-        
+
     </>
 
     return (
@@ -30,7 +43,23 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    {
+                        user ?
+                            <>
+                                <div className="flex flex-col md:flex-row items-center">
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-2">
+                                        <div className="w-8 md:w-10 rounded-full">
+                                            <img src={user?.photoURL} />
+                                        </div>
+                                    </label>
+                                    <p className="text-sm md:text-base mr-4">{user.displayName}</p>
+                                </div>
+                                <button onClick={handleLogOut} className="btn bg-emerald-400 hover:bg-emerald-500">Log Out</button>
+                            </> :
+                            <Link to='/login'>
+                                <button className="btn bg-emerald-400">Login</button>
+                            </Link>
+                    }
                 </div>
             </div>
         </div>

@@ -13,6 +13,10 @@ import BrandProducts from './components/BrandProducts/BrandProducts';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import ProductCart from './components/ProductCart/ProductCart';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
+import AuthProvider from './providers/AuthProvider';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import PrivateRoute from './components/routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -27,27 +31,35 @@ const router = createBrowserRouter([
       },
       {
         path: '/addProduct',
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
         path: '/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
       },
       {
         path: '/brandProducts/:name',
         element: <BrandProducts></BrandProducts>,
         loader: () => fetch('http://localhost:5000/products')
-      }, 
+      },
       {
         path: '/details/:id',
-        element: <ProductDetails></ProductDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
       },
       {
         path: '/cart',
-        element: <ProductCart></ProductCart>,
+        element: <PrivateRoute><ProductCart></ProductCart></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/cart')
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   },
@@ -55,6 +67,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
