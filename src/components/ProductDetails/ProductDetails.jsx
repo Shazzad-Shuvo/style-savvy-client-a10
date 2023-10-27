@@ -3,14 +3,20 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import AuthProvider, { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
     const loadedData = useLoaderData();
+    const {user} = useContext(AuthContext);
+    
     const { _id, name, price, description, rating, photo } = loadedData;
+    const email = user.email;
+    console.log(email);
 
     const handleAddToCart = (event) =>{
         event.preventDefault();
-        const newCartProduct = {name, price}
+        const newCartProduct = {name, price, email};
         // console.log(newCartProduct);
 
         fetch('http://localhost:5000/cart', {

@@ -70,7 +70,7 @@ const Register = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="min-h-screen mt-20 lg:mt-0 pt-20 pb-10 lg:py-10 mx-5 ">
+            <div className="min-h-screen mt-20 pb-10 lg:py-10 mx-5 ">
                 <div className="flex-col">
                     <div className="text-center">
                         <h1 className="text-5xl font-bold">Register now!</h1>

@@ -24,8 +24,8 @@ const Navbar = () => {
     </>
 
     return (
-        <div>
-            <div className="navbar bg-base-100 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
+            <div className="navbar backdrop-blur-3xl caret-yellow-200">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,7 +35,8 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="normal-case text-2xl font-bold">Style Savvy</a>
+                    <img className="w-16 lg:w-32" src="https://i.ibb.co/CWggTtv/cropped-1.png" alt="" />
+                    <a className="normal-case md:text-2xl font-bold">Style Savvy</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
