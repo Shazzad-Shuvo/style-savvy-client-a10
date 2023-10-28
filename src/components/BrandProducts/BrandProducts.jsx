@@ -3,7 +3,6 @@ import ProductCard from "../ProductCard/ProductCard";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import NoProduct from "../NoProduct/NoProduct";
-import Swiper from "swiper";
 import Slider from "../Slider/Slider";
 
 const BrandProducts = () => {
@@ -17,6 +16,7 @@ const BrandProducts = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <h2 className="text-5xl font-bold text-center mt-10 mb-10">Promotions</h2>
             <Slider></Slider>
             {
                 products.length> 0 ?

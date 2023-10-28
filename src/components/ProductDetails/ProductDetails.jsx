@@ -19,7 +19,7 @@ const ProductDetails = () => {
         const newCartProduct = {name, price, email};
         // console.log(newCartProduct);
 
-        fetch('http://localhost:5000/cart', {
+        fetch('https://style-savvy-server.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

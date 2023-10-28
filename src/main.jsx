@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/brands')
+        loader: () => fetch('https://style-savvy-server.vercel.app/brands')
       },
       {
         path: '/addProduct',
@@ -36,22 +36,22 @@ const router = createBrowserRouter([
       {
         path: '/updateProduct/:id',
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://style-savvy-server.vercel.app/products/${params.id}`)
       },
       {
         path: '/brandProducts/:name',
         element: <BrandProducts></BrandProducts>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://style-savvy-server.vercel.app/products')
       },
       {
         path: '/details/:id',
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://style-savvy-server.vercel.app/products/${params.id}`)
       },
       {
         path: '/cart',
         element: <PrivateRoute><ProductCart></ProductCart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://style-savvy-server.vercel.app/cart')
       },
       {
         path: '/register',
