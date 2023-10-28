@@ -56,7 +56,7 @@ const ProductDetails = () => {
                             <h4 className="font-semibold">Price:</h4>
                             <p className="flex items-center mb-3"><BsCurrencyDollar></BsCurrencyDollar><span className="text-pink-900 font-semibold">{price}</span></p>
                             
-                            <input type="submit" value="Add to Cart" className="btn btn-primary btn-block" />
+                            <input type="submit" value="Add to Cart" className="btn  bg-emerald-400 btn-block" />
                         </div>
                     </div>
                 </div>

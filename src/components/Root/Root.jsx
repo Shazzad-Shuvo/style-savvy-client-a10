@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
     return (
-        <div style={{ backgroundImage: 'url()', backgroundSize:'cover' }}>
+        <div>
             <Outlet></Outlet>            
         </div>
     );

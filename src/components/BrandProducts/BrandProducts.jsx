@@ -3,6 +3,8 @@ import ProductCard from "../ProductCard/ProductCard";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import NoProduct from "../NoProduct/NoProduct";
+import Swiper from "swiper";
+import Slider from "../Slider/Slider";
 
 const BrandProducts = () => {
 
@@ -15,6 +17,7 @@ const BrandProducts = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <Slider></Slider>
             {
                 products.length> 0 ?
                 <div className="max-w-6xl mx-5 md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">

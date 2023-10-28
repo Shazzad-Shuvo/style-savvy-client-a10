@@ -135,7 +135,7 @@ const AddProduct = () => {
                             </label>
                         </div>
                     </div>
-                    <input type="submit" value="Add Product" className="btn btn-primary btn-block" />
+                    <input type="submit" value="Add Product" className="btn  bg-emerald-400 btn-block" />
                 </form>
             </div>
         </div>

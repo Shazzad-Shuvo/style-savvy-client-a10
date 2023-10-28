@@ -15,10 +15,10 @@ const ProductCard = ({ product }) => {
                 <p>Rating: {rating} (out of 5)</p>
                 <div className="card-actions justify-start">
                     <Link to={`/details/${_id}`}>
-                        <button className="btn btn-primary">Details</button>
+                        <button className="btn  bg-amber-400">Details</button>
                     </Link>
                     <Link to={`/updateProduct/${_id}`}>
-                        <button className="btn btn-primary">Update</button>
+                        <button className="btn  bg-emerald-400">Update</button>
                     </Link>
 
                 </div>
