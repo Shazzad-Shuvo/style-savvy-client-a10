@@ -4,6 +4,15 @@ Website Live Link:
 
 - [Style Savvy](https://style-savvy-600b6.web.app)
 
+  ### Tools & Technologies Used:
+- Tailwind
+- React
+- React router
+- MongoDb
+- Node.js
+- Express.js
+- Firebase
+
 Project Features:
 
 - User can see various products by clicking on brands card.
